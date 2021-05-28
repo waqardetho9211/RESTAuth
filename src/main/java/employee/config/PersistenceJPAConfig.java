@@ -88,8 +88,8 @@ public class PersistenceJPAConfig extends WebMvcConfigurationSupport {
 
         return properties;
     }
-    @Bean(name = "multipartResolver")
-    public CommonsMultipartResolver commonsMultipartResolver(){
-        return new CommonsMultipartResolver();
-    }
+//    @Bean(name = "multipartResolver")
+//    public CommonsMultipartResolver commonsMultipartResolver(){
+//        return new CommonsMultipartResolver();
+//    }
 }

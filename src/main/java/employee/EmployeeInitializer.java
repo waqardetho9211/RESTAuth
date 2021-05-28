@@ -11,7 +11,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import employee.config.EmployeeConfig;
 import employee.config.PersistenceJPAConfig;
 
-public class EmployeeInitializer extends AbstractAnnotationConfigDispatcherServletInitializer implements WebApplicationInitializer {
+public class EmployeeInitializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(final ServletContext container) {
@@ -28,19 +28,4 @@ public class EmployeeInitializer extends AbstractAnnotationConfigDispatcherServl
         dispatcher.addMapping("/");
     }
 
-    @Override
-    protected String[] getServletMappings() {
-        return new String[] {"/"};
-    }
-
-    @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {
-                RootConfiguration.class };
-    }
-
-    @Override
-    protected Class<?>[] getServletConfigClasses() {
-        return null;
-    }
 }
